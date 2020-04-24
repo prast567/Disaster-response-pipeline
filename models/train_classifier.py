@@ -14,10 +14,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 import pickle
 from sklearn.metrics import confusion_matrix
-
-
 from sklearn.base import BaseEstimator, TransformerMixin
 import nltk
+nltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger','stopwords'])
+
 
 def load_data(database_filepath):
     """
