@@ -125,6 +125,8 @@ def evaluate_model(model, X_test, Y_test, category_names):
     accuracy = (y_pred == Y_test).mean()
     print("Confusion Matrix:\n", confusion_mat)
     print('Accuracy Score: %s'% accuracy)
+    print("\nBest Parameters:", model.best_params_)
+
 
 def save_model(model, model_filepath):
     with open(model_filepath, 'wb') as file:
